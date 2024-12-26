@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Roboto Mono", monospace;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header-image {
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .container {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 32px;
+            z-index: 10;
+        }
+
+        .container img {
+            width: 250px;
+            height: auto;
+        }
+
+        .menu-link {
+            color: white;
+            text-decoration: none;
+            margin-left: 16px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-link:hover {
+            color: #ff6347; /* Change color on hover */
+            text-decoration: underline;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .headline {
+            color: #fff;
+            font-size: 36px;
+            text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Video Links */
+        .video-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .video-links a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+            padding: 10px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .video-links a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <img class="header-image" src="IMG_1446 - frame at 0m8s.jpg" alt="Header Image"/>
+    <div class="container">
+        <img src="Logo.png" alt="Logo"/>
+        <div>
+            <a class="menu-link" href="home.html">Home</a>
+            <a class="menu-link" href="shows.html">Shows</a>
+            <a class="menu-link" href="videos.html">Videos</a>
+            <a class="menu-link" href="contactform.html">Kontakt</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="headline">
+            <h1>Our Videos</h1>
+        </div>
+
+        <!-- Video Links -->
+        <div class="video-links">
+            <a href="https://www.youtube.com/watch?v=zKWaAD7Rj3k" target="_blank">Video 1: Example Video</a>
+            <a href="https://www.youtube.com/watch?v=tgbNymZ7vqY" target="_blank">Video 2: Another Example</a>
+            <a href="https://www.youtube.com/watch?v=lbFqz_G8OWk" target="_blank">Video 3: Yet Another Video</a>
+        </div>
+    </div>
+  </body>
+</html>

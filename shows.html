@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shows</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Roboto Mono", monospace;
+            font-optical-sizing: auto;
+            font-style: normal;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header-image {
+            height: 100vh;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .container {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 32px;
+            z-index: 10;
+        }
+
+        .container img {
+            width: 250px;
+            height: auto;
+        }
+
+        .menu-link {
+            color: white;
+            text-decoration: none;
+            margin-left: 16px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .menu-link:hover {
+            color: #ff6347; /* Change color on hover */
+            text-decoration: underline;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .headline {
+            color: #fff;
+            font-size: 36px;  /* Adjusted to be smaller */
+            width: 100%;
+            text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        /* Table Styling */
+        .events-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .events-table th, .events-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .events-table th {
+            background-color: #ff6347;
+            color: white;
+        }
+
+        .events-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .events-table {
+                width: 90%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+  </head>
+  <body>
+    
+    <img class="header-image" src="IMG_1446 - frame at 0m32s.jpg" alt="Header Image"/>
+    <div class="container">
+        <img src="Logo.png" alt="Logo"/>
+        <div>
+            <a class="menu-link" href="home.html">Home</a>
+            <a class="menu-link" href="shows.html">Shows</a>
+            <a class="menu-link" href="videos.html">Videos</a>
+            <a class="menu-link" href="contactform.html">Kontakt</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="headline">
+            <h1>Upcoming Shows</h1>
+        </div>
+
+        <!-- Upcoming Events Table -->
+        <table class="events-table">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Concert at the Beach</td>
+                    <td>January 15, 2024</td>
+                    <td>Santa Monica, CA</td>
+                    <td><a href="#" class="menu-link">More Info</a></td>
+                </tr>
+                <tr>
+                    <td>Rock Festival</td>
+                    <td>February 2, 2024</td>
+                    <td>Los Angeles, CA</td>
+                    <td><a href="#" class="menu-link">More Info</a></td>
+                </tr>
+                <tr>
+                    <td>Jazz Night</td>
+                    <td>March 5, 2024</td>
+                    <td>New York, NY</td>
+                    <td><a href="#" class="menu-link">More Info</a></td>
+                </tr>
+                <tr>
+                    <td>Comedy Show</td>
+                    <td>April 10, 2024</td>
+                    <td>Chicago, IL</td>
+                    <td><a href="#" class="menu-link">More Info</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </body>
+</html>
