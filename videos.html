@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Videos</title>
+    <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <style>
+        /* Your existing styles remain unchanged */
         body {
             margin: 0;
             font-family: "Roboto Mono", monospace;
+            font-optical-sizing: auto;
+            font-style: normal;
             background-color: #f4f4f4;
             color: #333;
         }
@@ -51,85 +54,160 @@
         }
 
         .menu-link:hover {
-            color: #ff6347; /* Change color on hover */
+            color: #ff6347;
             text-decoration: underline;
         }
 
         .main-content {
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            flex-direction: column;
             position: absolute;
-            top: 40%;
             left: 50%;
-            transform: translateX(-50%) translateY(-50%);
+            top: 80px;
+            transform: translateX(-50%);
             width: 90%;
             max-width: 1200px;
+            z-index: 1;
+            padding: 20px;
         }
 
         .headline {
             color: #fff;
             font-size: 36px;
             text-shadow: 5px 5px rgba(0, 0, 0, 0.5);
-            text-align: center;
+            text-align: left;
+            line-height: 1.2;
             margin-bottom: 30px;
+            padding-top: 20px;
         }
 
-        /* Video Links */
-        .video-links {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
+        .contactform {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
         }
 
-        .video-links a {
-            text-decoration: none;
-            color: #007BFF;
+        .contactform label {
             font-size: 18px;
-            padding: 10px;
-            border: 2px solid #007BFF;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
         }
 
-        .video-links a:hover {
-            background-color: #007BFF;
+        .contactform input,
+        .contactform textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .contactform button {
+            padding: 12px 20px;
+            background-color: #ff6347;
+            border: none;
             color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contactform button:hover {
+            background-color: #e5533f;
         }
 
         /* Mobile responsiveness */
         @media (max-width: 768px) {
+            .header-image {
+                height: 60vh;
+            }
+
+            .container {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0 16px;
+            }
+
+            .container img {
+                width: 200px;
+                margin-bottom: 16px;
+            }
+
+            .menu-link {
+                font-size: 16px;
+                margin-left: 8px;
+            }
+
+            .main-content {
+                top: 80px;
+                flex-direction: column;
+                transform: translateX(-50%);
+            }
+
             .headline {
-                font-size: 24px;
+                font-size: 12px;
                 margin-bottom: 20px;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            .contactform {
+                width: 90%;
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 15px;
+                max-height: 400px;
+                overflow-y: auto;
+            }
+
+            .contactform label {
+                font-size: 14px;
+            }
+
+            .contactform input,
+            .contactform textarea {
+                font-size: 14px;
+            }
+
+            .contactform button {
+                font-size: 16px;
             }
         }
     </style>
   </head>
   <body>
-    <img class="header-image" src="IMG_1446 - frame at 0m8s.jpg" alt="Header Image"/>
+    <img class="header-image" src="IMG_1446 - frame at 0m7s.jpg" alt="Header Image"/>
     <div class="container">
         <img src="Logo.png" alt="Logo"/>
         <div>
             <a class="menu-link" href="home.html">Home</a>
             <a class="menu-link" href="shows.html">Shows</a>
             <a class="menu-link" href="videos.html">Videos</a>
-            <a class="menu-link" href="contactform.html">Kontakt</a>
+            <a class="menu-link" href="contact.html">Kontakt</a>
         </div>
     </div>
 
     <div class="main-content">
-        <div class="headline">
-            <h1>Our Videos</h1>
-        </div>
+      <audio controls>
+      <source src="audio/PrettyLittleGirl_Mixdown.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+      </audio>
 
-        <!-- Video Links -->
-        <div class="video-links">
-            <a href="https://www.youtube.com/watch?v=zKWaAD7Rj3k" target="_blank">Video 1: Example Video</a>
-            <a href="https://www.youtube.com/watch?v=tgbNymZ7vqY" target="_blank">Video 2: Another Example</a>
-            <a href="https://www.youtube.com/watch?v=lbFqz_G8OWk" target="_blank">Video 3: Yet Another Video</a>
+        <!-- Inserting the iframe with your specific video -->
+        <div class="video-container" style="margin-top: 20px;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KanGGTDzrJo?si=9-XaAOuMNfnO6cah" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
   </body>
